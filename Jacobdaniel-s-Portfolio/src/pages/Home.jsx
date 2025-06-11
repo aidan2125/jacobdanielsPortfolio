@@ -1,36 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import skills from "../data/skills.js";
 import "../styles/global.css";
-import "../styles/home.css"; // Import the new CSS file
+import "../styles/home.css";
 
 export default function Home() {
   return (
     <main className="main">
-      <section className="section text-center home-hero">
-        <h1>Hi, I'm Jacob Daniels</h1>
-        <p>
-          I'm a full-stack developer passionate about building modern, accessible,
-          and performant web applications.
-        </p>
-        <div className="button-group">
-          <Link to="/projects" className="btn btn-primary">
-            View My Projects
-          </Link>
-          <Link to="/about" className="btn btn-secondary">
-            About Me
-          </Link>
+      {/* Hero Section */}
+      <section className="section home-hero text-center">
+        <div className="container">
+          <h1 className="hero-title">Hi, I'm Jacob Daniels</h1>
+          <p className="hero-subtitle">
+            Aspiring IT Support Specialist | Skilled in Hardware, Troubleshooting,
+            Customer Service & Data Analytics
+          </p>
         </div>
       </section>
+
+      {/* Skills Section */}
       <section className="section skills-section">
-        <h2>Featured Skills</h2>
-        <ul className="skills-list">
-          {skills.slice(0, 6).map((skill, idx) => (
-            <li key={idx} className="card">
-              <span>{skill}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="container text-center">
+          <h2 className="section-title">Featured Skills</h2>
+          <ul className="skills-list">
+            {skills.slice(0, 6).map((skill, idx) => (
+              <li key={idx} className="card skill-card">
+                <span className="skill-text">{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </main>
   );

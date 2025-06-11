@@ -1,19 +1,7 @@
 const skills = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "PostgreSQL",
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "Git",
-  "Figma",
-  "REST APIs",
-  "Next.js",
-  "Redux",
+"JavaScript— Proficient in Java with experience in object-oriented programming, data structures, and building applications.",
+ "Excel (Advanced) — Data analysis, pivot tables, and visualization.",
+ "SQL — Writing and optimizing queries for database management."
 ];
 
 export default skills;

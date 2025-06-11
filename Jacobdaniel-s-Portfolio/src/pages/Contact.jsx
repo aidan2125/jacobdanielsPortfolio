@@ -1,138 +1,115 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
-import "../styles/Contact.css"; 
+import React from "react";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import "../styles/Contact.css";
 
-export default function Contact() {
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      details: 'jacob@example.com',
-      link: 'mailto:jacob@example.com',
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      details: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
-    },
-    {
-      icon: MapPin,
-      title: 'Location',
-      details: 'Your City, Country',
-      link: '#',
-    },
-  ];
+const contactInfo = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "Jacobdaniels237@gmail.com",
+    href: "mailto:Jacobdaniels237@gmail.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+27 79 853 0323",
+    href: "tel:+27798530323",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Your City, Country",
+    href: "https://maps.google.com", // You can update this to a real location link
+  },
+];
 
-  return (
-    <section id="contact" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind? Let's work together to bring your ideas to life.
-          </p>
-        </div>
+const socialLinks = [
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/yourusername",
+    href: "https://github.com/yourusername",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/yourprofile",
+    href: "https://linkedin.com/in/yourprofile",
+  },
+];
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contact Information */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white">
-              Contact Information
-            </h3>
-            {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex items-center space-x-4">
-                <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
-                  <info.icon className="w-6 h-6 text-blue-600 dark:text-blue-300" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white">{info.title}</h4>
-                  <a
-                    href={info.link}
-                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  >
-                    {info.details}
-                  </a>
-                </div>
-              </div>
-            ))}
-
-            {/* Social Links */}
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg p-6 mt-6">
-              <h4 className="font-medium mb-4 text-gray-900 dark:text-white">Follow Me</h4>
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  Twitter
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2 flex items-center">
-            <div className="w-full space-y-6">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send a Message</h3>
-              <form
-                action="https://formspree.io/f/mpwrqwod"
-                method="POST"
-                className="space-y-4"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-                  />
-                </div>
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-                />
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="Your Message"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all resize-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-indigo-700 text-white py-3 rounded-lg font-semibold hover:bg-indigo-800 transition-all duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+const Contact = () => (
+  <section className="contact-section contact-wrapper min-h-screen flex items-center justify-center px-4 py-16">
+    <div className="contact-container w-full max-w-2xl mx-auto">
+      <div className="contact-header">
+        <h2 className="section-title text-3xl md:text-4xl font-bold mb-2 text-indigo-700">
+          Let's Work Together
+        </h2>
+        <p className="section-subtitle text-base text-gray-600 mb-8">
+          Have a project in mind? I'd love to hear about it.
+        </p>
       </div>
-    </section>
-  );
-}
+      <div className="contact-content flex flex-col gap-8">
+        {/* Contact Info */}
+        <div className="contact-details flex flex-col gap-6">
+          {[...contactInfo, ...socialLinks].map((item, idx) => (
+            <a
+              key={idx}
+              href={item.href}
+              className="contact-item flex items-center gap-4 p-4 rounded-lg border border-gray-200 bg-indigo-50 hover:bg-indigo-100 transition-all duration-300 group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="contact-icon w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center group-hover:bg-indigo-200 transition-colors">
+                <item.icon className="w-6 h-6" />
+              </span>
+              <span>
+                <h4>{item.label}</h4>
+                <span className="block">{item.value}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+        {/* Contact Form */}
+        <form
+          className="contact-form mt-6"
+          action="https://formspree.io/f/mpwrqwod"
+          method="POST"
+          autoComplete="off"
+        >
+          <div className="form-grid grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+          />
+          <textarea
+            name="message"
+            rows={5}
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" className="btn-primary contact-form-btn">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+);
+
+export default Contact;

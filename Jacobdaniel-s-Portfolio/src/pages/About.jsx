@@ -1,5 +1,6 @@
 import { Code, Palette, Rocket } from 'lucide-react';
 import "../styles/about.css"; 
+import profileImg from "../assets/images/2c5add31-2f57-4223-8700-1f3ef7005f12.jpg";
 
 export default function About() {
   const highlights = [
@@ -17,7 +18,8 @@ export default function About() {
       icon: Rocket,
       title: 'Performance',
       description: 'Optimizing applications for speed and efficiency.',
-    },
+    }
+    
   ];
 
   return (
@@ -37,7 +39,7 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800">
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=600&fit=crop"
+                src={profileImg}
                 alt="Jacob Daniels"
                 className="w-full h-full object-cover"
               />
@@ -47,12 +49,9 @@ export default function About() {
           {/* Right side - Content */}
           <div className="space-y-6">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm a full-stack developer with a keen eye for design and a love for creating seamless user experiences. My journey in tech has taken me through a variety of projects, from e-commerce platforms to interactive portfolios.
-            </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               I enjoy combining technical expertise with creative problem-solving, ensuring every project is both functional and visually engaging.
             </p>
-
+            
             {/* Highlights */}
             <div className="grid gap-6 mt-8">
               {highlights.map((highlight, index) => (

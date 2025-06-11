@@ -1,5 +1,5 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import "../styles/Resume.css"; // Make sure this file exists at src/styles/Resume.css
+import { ArrowDown } from 'lucide-react';
+import "../styles/Resume.css";
 
 export default function Resume() {
   const scrollToAbout = () => {
@@ -10,84 +10,88 @@ export default function Resume() {
   };
 
   return (
-    <section id="resume" className="resume-section min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-blue-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center animate-fade-in">
-          {/* Profile Image */}
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-blue-300 p-1">
-              <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 flex items-center justify-center">
-                <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face"
-                  alt="Profile"
-                  className="w-28 h-28 rounded-full object-cover"
-                />
-              </div>
+    <section id="resume" className="resume-section">
+      <div className="resume-background" />
+      <div className="resume-content">
+        <div className="resume-card">
+          {/* Heading */}
+          <h1 className="cv-heading">
+            CV <span className="highlight"></span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="resume-subheading">
+            View or Download My CV
+          </p>
+
+          {/* CV Thumbnail Preview */}
+          <div
+            className="cv-thumbnail-wrapper"
+            style={{
+              margin: "2.5rem auto 2rem",
+              maxWidth: 260,
+              background: "rgba(255,255,255,0.95)",
+              borderRadius: "16px",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.13)",
+              padding: "1.2rem 1.2rem 0.7rem",
+              border: "1.5px solid #cbd5e1",
+              transition: "box-shadow 0.2s"
+            }}
+          >
+            <a href="/assets/Jacob Daniels 2025 Candidate CV.pdf" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/Jacob Daniels 2025 Candidate CV (1)1749667716.jpg"
+                alt="CV Preview"
+                style={{
+                  width: "100%",
+                  borderRadius: "10px",
+                  boxShadow: "0 6px 20px rgba(30,41,59,0.13)",
+                  border: "1.5px solid #94a3b8",
+                  background: "#f1f5f9",
+                  transition: "transform 0.2s, box-shadow 0.2s",
+                  cursor: "pointer"
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.transform = "scale(1.06)";
+                  e.currentTarget.style.boxShadow = "0 12px 32px rgba(30,41,59,0.18)";
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.boxShadow = "0 6px 20px rgba(30,41,59,0.13)";
+                }}
+              />
+            </a>
+            <div style={{ fontSize: "1.05rem", color: "#334155", marginTop: "0.7rem", fontWeight: 500 }}>
+              Preview CV
             </div>
           </div>
 
-          {/* Main content */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Hi, I'm{' '}
-            <span className="bg-gradient-to-r from-blue-500 to-blue-300 bg-clip-text text-transparent">
-              Jacob Daniels
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Full Stack Developer passionate about building beautiful, functional digital experiences.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          {/* Download Button */}
+          <div className="resume-buttons" style={{ display: "flex", justifyContent: "center" }}>
             <a
-              href="/projects"
-              className="text-lg px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition text-center"
-            >
-              View My Work
-            </a>
-            <a
-              href="/resume.pdf"
+              href="/assets/Jacob Daniels 2025 Candidate CV.pdf"
               download
-              className="text-lg px-8 py-3 border border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 transition text-center"
+              className="btn btn-outline"
+              style={{
+                border: "2px solid #3b82f6",
+                color: "#3b82f6",
+                background: "transparent",
+                fontWeight: 600,
+                fontSize: "1.1rem",
+                position: "relative"
+              }}
             >
               Download CV
             </a>
           </div>
 
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-12">
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2 hover:scale-110 transform"
-              aria-label="GitHub"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2 hover:scale-110 transform"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2 hover:scale-110 transform"
-              aria-label="Email"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
-
-          {/* Scroll indicator */}
+          {/* Scroll Indicator */}
           <button
             onClick={scrollToAbout}
-            className="animate-bounce text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="scroll-indicator"
             aria-label="Scroll to About"
           >
-            <ArrowDown size={24} />
+            <ArrowDown size={28} />
           </button>
         </div>
       </div>
@@ -95,3 +99,15 @@ export default function Resume() {
   );
 }
 
+/* Add this to your Resume.css: */
+//
+// .blinking-cursor .blinking-bar {
+//   animation: blink 1s steps(2, start) infinite;
+// }
+//
+// @keyframes blink {
+//   to {
+//     visibility: hidden;
+//   }
+// }
+//

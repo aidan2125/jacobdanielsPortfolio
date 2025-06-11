@@ -2,7 +2,8 @@
   min-height: 100vh;
   padding: 4rem 1rem 2rem 1rem;
   background: linear-gradient(135deg, var(--color-bg, #f9fafb) 0%, var(--color-bg-alt, #f3f4f6) 100%);
-  transition: background 0.4s;
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +19,7 @@
   margin-bottom: 2.5rem;
   color: var(--color-text, #1a202c);
   letter-spacing: -0.02em;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .projects-grid {
@@ -36,11 +38,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s, transform 0.2s, border 0.2s;
+  transition: box-shadow 0.3s ease;
   animation: fadeIn 0.8s cubic-bezier(0.4,0,0.2,1);
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .project-card:hover {
-  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.18);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px) scale(1.03);
   border-color: var(--color-primary, #2563eb);
 }
@@ -58,7 +61,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 .project-card:hover .project-image {
   transform: scale(1.05);
@@ -77,6 +80,7 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--color-text, #1a202c);
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .project-description {
@@ -84,6 +88,7 @@
   font-size: 1rem;
   margin-bottom: 1rem;
   flex: 1;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .project-tags {
@@ -100,6 +105,7 @@
   border-radius: 999px;
   font-weight: 500;
   letter-spacing: 0.01em;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .project-links {
@@ -115,6 +121,7 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .project-link:hover {
   color: var(--color-link-hover, #1d4ed8);
