@@ -1,5 +1,5 @@
 import { ArrowDown } from 'lucide-react';
-import "../styles/Resume.css";
+import "../styles/resume.css";
 
 export default function Resume() {
   const scrollToAbout = () => {
