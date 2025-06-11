@@ -1,0 +1,153 @@
+.resume-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-bg, #f9fafb) 0%, var(--color-bg-alt, #f3f4f6) 100%);
+  transition: background 0.4s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .resume-section {
+    background: linear-gradient(135deg, var(--color-bg, #18181b) 0%, var(--color-bg-alt, #23272f) 100%);
+  }
+}
+
+.resume-profile-img-wrapper {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto 2rem auto;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--color-primary, #2563eb), var(--color-primary-light, #60a5fa));
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(30, 64, 175, 0.10);
+}
+
+.resume-profile-img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-card, #fff);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--color-text, #1a202c);
+  letter-spacing: -0.02em;
+}
+
+.resume-title-gradient {
+  background: linear-gradient(90deg, var(--color-primary, #2563eb), var(--color-primary-light, #60a5fa));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.resume-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-muted, #6b7280);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.resume-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  background: var(--color-primary, #2563eb);
+  color: #fff;
+  box-shadow: var(--shadow, 0 4px 24px rgba(0,0,0,0.08));
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  text-decoration: none;
+  display: inline-block;
+}
+.resume-btn.secondary {
+  background: transparent;
+  color: var(--color-primary, #2563eb);
+  border: 2px solid var(--color-primary, #2563eb);
+}
+.resume-btn:hover, .resume-btn.secondary:hover {
+  background: var(--color-primary-light, #60a5fa);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.14);
+}
+
+.resume-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.resume-social-link {
+  color: var(--color-muted, #6b7280);
+  font-size: 1.5rem;
+  transition: color 0.2s, transform 0.2s;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.resume-social-link:hover {
+  color: var(--color-primary, #2563eb);
+  background: var(--color-bg-alt, #f3f4f6);
+  transform: scale(1.15);
+}
+
+.resume-scroll-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  animation: bounce 1.5s infinite;
+  color: var(--color-muted, #6b7280);
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+.resume-scroll-indicator:hover {
+  color: var(--color-primary, #2563eb);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(12px);}
+}
+
+@media (max-width: 700px) {
+  .resume-title {
+    font-size: 2rem;
+  }
+  .resume-subtitle {
+    font-size: 1rem;
+  }
+  .resume-profile-img-wrapper {
+    width: 6rem;
+    height: 6rem;
+  }
+  .resume-profile-img {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
