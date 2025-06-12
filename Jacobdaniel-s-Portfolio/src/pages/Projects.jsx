@@ -16,7 +16,7 @@ export default function Projects() {
       description: "I applied my skills in Excel, SQL, and Power BI by analyzing real-world university data from South Africa.",
       image: '../assets/Big Data Analysis concept Flat Poster 472916 Vector Art at Vecteezy.png',
       technologies: ['Excel', 'SQL', 'Power BI', 'Data Analysis'],
-       liveUrl: '',
+       //liveUrl: '',
       // githubUrl: '#',
     },
     {

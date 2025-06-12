@@ -86,6 +86,7 @@ export default function Resume() {
           </div>
 
           {/* Scroll Indicator */}
+          {/*
           <button
             onClick={scrollToAbout}
             className="scroll-indicator"
@@ -93,6 +94,7 @@ export default function Resume() {
           >
             <ArrowDown size={28} />
           </button>
+          */}
         </div>
       </div>
     </section>

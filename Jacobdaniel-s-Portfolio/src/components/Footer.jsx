@@ -3,12 +3,12 @@ import '../styles/Footer.css'; // Ensure this file exists
 
 const socialLinks = [
   {
-    href: "https://github.com/yourusername",
+    href: "https://github.com/JacobDaniels30",
     label: "GitHub",
     icon: <Github size={20} />,
   },
   {
-    href: "https://linkedin.com/in/yourprofile",
+    href: "https://www.linkedin.com/in/jacob-daniels30/",
     label: "LinkedIn",
     icon: <Linkedin size={20} />,
   },
