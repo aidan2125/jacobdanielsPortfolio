@@ -6,18 +6,18 @@ export default function About() {
   const highlights = [
     {
       icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable code with best practices.',
+      title: 'Technical support',
+      description: 'Excel at problem-solving and technical support.',
     },
     {
       icon: Palette,
-      title: 'Design Focus',
-      description: 'Creating beautiful, user-centered digital experiences.',
+      title: 'Solution-oriented',
+      description: 'Provide clear and effective solutions while ensuring great customer service.',
     },
     {
       icon: Rocket,
-      title: 'Performance',
-      description: 'Optimizing applications for speed and efficiency.',
+      title: 'Soft skills',
+      description: 'Thrive in collaborative environments & manage time efficiently to meet deadlines and deliver results',
     }
     
   ];

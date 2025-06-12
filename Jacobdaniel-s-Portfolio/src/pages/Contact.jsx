@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Your City, Country",
+    value: "Cape Town, South Africa",
     href: "https://maps.google.com", // You can update this to a real location link
   },
 ];
@@ -27,14 +27,14 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/yourusername",
-    href: "https://github.com/yourusername",
+    value: "github.com/JacobDaniels30",
+    href: "https://github.com/JacobDaniels30",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/yourprofile",
-    href: "https://linkedin.com/in/yourprofile",
+    value: "linkedin.com/in/jacob-daniels30",
+    href: "https://www.linkedin.com/in/jacob-daniels30/",
   },
 ];
 
@@ -73,7 +73,7 @@ const Contact = () => (
         {/* Contact Form */}
         <form
           className="contact-form mt-6"
-          action="https://formspree.io/f/mpwrqwod"
+          action="https://formspree.io/f/mnnvdvzy"
           method="POST"
           autoComplete="off"
         >
