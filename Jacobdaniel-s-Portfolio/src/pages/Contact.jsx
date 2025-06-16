@@ -42,9 +42,9 @@ const Contact = () => (
   <section className="contact-section contact-wrapper min-h-screen flex items-center justify-center px-4 py-16">
     <div className="contact-container w-full max-w-2xl mx-auto">
       <div className="contact-header">
-        <h1 className="section-title text-3xl md:text-4xl font-bold mb-2 text-indigo-700">
+        <h2 className="section-title text-3xl md:text-4xl font-bold mb-2 text-indigo-700">
           Let's Work Together
-        </h1>
+        </h2>
         <p className="section-subtitle text-base text-gray-600 mb-8">
           Have a project in mind? I'd love to hear about it.
         </p>
@@ -64,7 +64,7 @@ const Contact = () => (
                 <item.icon className="w-6 h-6" />
               </span>
               <span>
-                <h2>{item.label}</h2>
+                <h3>{item.label}</h3>
                 <span className="block">{item.value}</span>
               </span>
             </a>

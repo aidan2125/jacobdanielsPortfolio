@@ -27,9 +27,9 @@ export default function About() {
     <section id="about" className="about-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             About Me
-          </h1>
+          </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Hi, I’m Jacob — a passionate and driven data analytics trainee with
             a strong foundation in IT support and a growing expertise in
@@ -78,9 +78,9 @@ export default function About() {
                     <highlight.icon className="w-6 h-6 text-blue-600 dark:text-blue-300" />
                   </div>
                   <div>
-                    <h2 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                       {highlight.title}
-                    </h2>
+                    </h3>
                     <p className="text-gray-600 dark:text-gray-400">
                       {highlight.description}
                     </p>
