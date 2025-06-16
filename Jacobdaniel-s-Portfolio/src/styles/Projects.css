@@ -86,27 +86,26 @@
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-/* Grid layout */
+/* Grid layout - Single column, projects below each other */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 800px;
   margin: 0 auto;
   animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
     max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .projects-grid {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 
@@ -122,7 +121,33 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
   animation: fadeInUp 0.8s ease-out calc(0.4s + var(--delay, 0s)) both;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 300px;
+  }
+
+  .project-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .project-image-wrapper {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .project-card:nth-child(1) {
@@ -170,19 +195,42 @@
 }
 
 /* Project image */
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  border-bottom: 2px solid var(--border-color);
+.project-image-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card:hover img {
+.project-card img,
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img,
+.project-card:hover .project-image {
   transform: scale(1.05);
 }
 
+@media (min-width: 768px) {
+  .project-card img,
+  .project-image {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+  }
+}
+
 /* Project content */
+.project-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .project-card .p-6 {
   padding: 2rem;
   flex: 1;
