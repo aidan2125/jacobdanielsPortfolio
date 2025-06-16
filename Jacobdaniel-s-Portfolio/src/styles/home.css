@@ -55,8 +55,8 @@
 
   --glow-color: rgba(135, 206, 235, 0.4);
   --glow-orange: rgba(255, 179, 71, 0.4);
-  --text-primary: #2c3e50;
-  --text-secondary: #5d6d7e;
+  --text-primary: #000000;
+  --text-secondary: #000000;
   --bg-glass: rgba(255, 255, 255, 0.15);
   --bg-glass-blue: rgba(135, 206, 235, 0.1);
   --bg-glass-orange: rgba(255, 179, 71, 0.1);
@@ -180,9 +180,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-primary: #f8f9fa;
-    --text-secondary: #cbd5e1;
-    --bg-glass: rgba(15, 23, 42, 0.3);
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --bg-glass: rgba(255, 255, 255, 0.8);
     --glow-color: rgba(135, 206, 235, 0.3);
   }
 
@@ -205,15 +205,6 @@
   letter-spacing: -0.04em;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
-  background: linear-gradient(
-    135deg,
-    var(--soft-blue-dark) 0%,
-    var(--pure-white) 50%,
-    var(--warm-orange-dark) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   animation: var(--animation-bounce);
   position: relative;
   z-index: 1;
@@ -251,7 +242,6 @@
   border-radius: var(--border-radius-lg);
   background: var(--bg-glass);
   border: 1px solid rgba(135, 206, 235, 0.2);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* ========= BUTTON GROUP ========= */
@@ -274,7 +264,7 @@
   font-size: 1.1rem;
   text-decoration: none;
   background: var(--gradient-secondary);
-  color: var(--pure-white);
+  color: var(--text-primary);
   border: 2px solid var(--soft-blue-light);
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -283,7 +273,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: Arial, sans-serif;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .button-group a::before,
@@ -358,14 +347,6 @@
   text-align: center;
   position: relative;
   z-index: 2;
-  background: linear-gradient(
-    135deg,
-    var(--soft-blue-dark) 0%,
-    var(--warm-orange-dark) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   animation: var(--animation-bounce);
   font-family: Arial, sans-serif;
   text-transform: uppercase;
@@ -521,62 +502,50 @@
 @media (prefers-color-scheme: dark) {
   .hero-title,
   .home-hero h1 {
-    background: linear-gradient(
-      135deg,
-      var(--soft-blue-light) 0%,
-      var(--pure-white) 50%,
-      var(--warm-orange-light) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
   }
 
   .hero-subtitle,
   .home-hero p {
-    color: var(--off-white);
-    background: rgba(30, 41, 59, 0.4);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(135, 206, 235, 0.3);
   }
 
   .section-title {
-    background: linear-gradient(
-      135deg,
-      var(--soft-blue-light) 0%,
-      var(--warm-orange-light) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
   }
 
   .skill-card {
     background: linear-gradient(
       135deg,
-      rgba(30, 41, 59, 0.6) 0%,
-      rgba(15, 23, 42, 0.4) 100%
+      var(--pure-white) 0%,
+      var(--off-white) 100%
     );
-    color: var(--off-white);
+    color: var(--text-primary);
     border: 2px solid rgba(135, 206, 235, 0.4);
   }
 
   .skill-card:hover {
     background: linear-gradient(
       135deg,
-      rgba(30, 41, 59, 0.8) 0%,
-      rgba(15, 23, 42, 0.6) 100%
+      var(--cream-white) 0%,
+      var(--pure-white) 100%
     );
-    border-color: var(--warm-orange-light);
+    border-color: var(--warm-orange);
+    color: var(--text-primary);
   }
 
   .button-group a,
   .button-group button {
     border-color: var(--soft-blue-light);
+    color: var(--text-primary);
   }
 
   .button-group a:hover,
   .button-group button:hover {
     border-color: var(--warm-orange-light);
+    color: var(--text-primary);
   }
 }
 
