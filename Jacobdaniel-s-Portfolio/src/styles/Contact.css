@@ -1,8 +1,9 @@
 /* ========= CONTACT PAGE STYLES - SOFT BLUE, ORANGE, WHITE THEME ========= */
 
 .contact-section {
+  width: 100%;
   min-height: 100vh;
-  padding: 4rem 1rem 2rem 1rem;
+  padding: 3rem 1rem;
   background: var(
     --gradient-contact,
     linear-gradient(135deg, #ffcc80 0%, #ffffff 50%, #b0e0e6 100%)
@@ -11,6 +12,10 @@
   font-family: Arial, sans-serif;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .contact-section::before {

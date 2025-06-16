@@ -1,8 +1,9 @@
 /* ========= ABOUT PAGE STYLES - SOFT BLUE, ORANGE, WHITE THEME ========= */
 
 .about-section {
+  width: 100%;
   min-height: 100vh;
-  padding: 4rem 1rem 2rem 1rem;
+  padding: 3rem 1rem;
   background: var(
     --gradient-about,
     linear-gradient(135deg, #f8f9fa 0%, #ffffff 30%, #b0e0e6 70%, #ffcc80 100%)
@@ -11,6 +12,10 @@
   font-family: Arial, sans-serif;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .about-section::before {

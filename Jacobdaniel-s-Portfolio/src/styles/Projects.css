@@ -1,8 +1,9 @@
 /* ========= PROJECTS PAGE STYLES - SOFT BLUE, ORANGE, WHITE THEME ========= */
 
 .projects-section {
+  width: 100%;
   min-height: 100vh;
-  padding: 4rem 1rem 2rem 1rem;
+  padding: 3rem 1rem;
   background: var(
     --gradient-projects,
     linear-gradient(135deg, #b0e0e6 0%, #f8f9fa 50%, #ffcc80 100%)
@@ -11,6 +12,10 @@
   font-family: Arial, sans-serif;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .projects-section::before {
