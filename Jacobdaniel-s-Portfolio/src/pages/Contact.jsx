@@ -64,7 +64,7 @@ const Contact = () => (
                 <item.icon className="w-6 h-6" />
               </span>
               <span>
-                <h4>{item.label}</h4>
+                <h2>{item.label}</h2>
                 <span className="block">{item.value}</span>
               </span>
             </a>
