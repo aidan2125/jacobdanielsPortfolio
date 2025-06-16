@@ -78,9 +78,9 @@ export default function About() {
                     <highlight.icon className="w-6 h-6 text-blue-600 dark:text-blue-300" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    <h2 className="font-semibold text-gray-900 dark:text-white mb-2">
                       {highlight.title}
-                    </h3>
+                    </h2>
                     <p className="text-gray-600 dark:text-gray-400">
                       {highlight.description}
                     </p>
