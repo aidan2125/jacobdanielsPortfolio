@@ -10,16 +10,16 @@ export default function Home() {
         <div className="container">
           <h1 className="hero-title">Hi, I'm Jacob Daniels</h1>
           <p className="hero-subtitle">
-            Aspiring IT Support Specialist | Skilled in Hardware, Troubleshooting,
-            Customer Service & Data Analytics
+            Aspiring IT Support Specialist | Skilled in Hardware,
+            Troubleshooting, Customer Service & Data Analytics
           </p>
         </div>
       </section>
 
       {/* Skills Section */}
       <section className="section skills-section">
-        <div className="container text-center">
-          <h2 className="section-title">Featured Skills</h2>
+        <h2 className="section-title">Featured Skills</h2>
+        <div className="container skills-container">
           <ul className="skills-list">
             {skills.slice(0, 6).map((skill, idx) => (
               <li key={idx} className="card skill-card">
