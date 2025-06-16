@@ -1,5 +1,1 @@
-# SPA fallback
 /*    /index.html   200
-
-# Asset redirects
-/assets/*  /assets/:splat  200
