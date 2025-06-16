@@ -31,7 +31,7 @@ export default function Projects() {
 
   return (
     <section className="projects-section">
-      <h2 className="projects-title">Featured Projects</h2>
+      <h1 className="projects-title">Featured Projects</h1>
       <p className="projects-subtitle">
         A showcase of my recent work and personal projects
       </p>
@@ -47,7 +47,7 @@ export default function Projects() {
               />
             </div>
             <div className="project-content">
-              <h3 className="project-title">{project.title}</h3>
+              <h2 className="project-title">{project.title}</h2>
               <p className="project-description">{project.description}</p>
               <div className="project-tags">
                 {project.technologies.map((tech, techIndex) => (

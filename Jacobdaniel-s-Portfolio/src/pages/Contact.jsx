@@ -42,9 +42,9 @@ const Contact = () => (
   <section className="contact-section contact-wrapper min-h-screen flex items-center justify-center px-4 py-16">
     <div className="contact-container w-full max-w-2xl mx-auto">
       <div className="contact-header">
-        <h2 className="section-title text-3xl md:text-4xl font-bold mb-2 text-indigo-700">
+        <h1 className="section-title text-3xl md:text-4xl font-bold mb-2 text-indigo-700">
           Let's Work Together
-        </h2>
+        </h1>
         <p className="section-subtitle text-base text-gray-600 mb-8">
           Have a project in mind? I'd love to hear about it.
         </p>
@@ -78,12 +78,7 @@ const Contact = () => (
           autoComplete="off"
         >
           <div className="form-grid grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
+            <input type="text" name="name" placeholder="Your Name" required />
             <input
               type="email"
               name="email"
@@ -91,12 +86,7 @@ const Contact = () => (
               required
             />
           </div>
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            required
-          />
+          <input type="text" name="subject" placeholder="Subject" required />
           <textarea
             name="message"
             rows={5}
