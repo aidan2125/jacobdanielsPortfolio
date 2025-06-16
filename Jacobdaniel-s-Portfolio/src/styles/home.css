@@ -1,18 +1,71 @@
 /* ========= CSS CUSTOM PROPERTIES ========= */
 :root {
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-quaternary: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  --glow-color: rgba(102, 126, 234, 0.4);
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --bg-glass: rgba(255, 255, 255, 0.1);
+  /* Core colors: Soft Blue, Orange, White */
+  --soft-blue: #87ceeb;
+  --soft-blue-dark: #5f9ea0;
+  --soft-blue-light: #b0e0e6;
+  --warm-orange: #ffb347;
+  --warm-orange-dark: #ff9800;
+  --warm-orange-light: #ffcc80;
+  --pure-white: #ffffff;
+  --off-white: #fafafa;
+  --cream-white: #f8f9fa;
+
+  /* Beautiful gradients using core colors */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--soft-blue) 0%,
+    var(--pure-white) 50%,
+    var(--warm-orange-light) 100%
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--warm-orange) 0%,
+    var(--soft-blue-light) 100%
+  );
+  --gradient-tertiary: linear-gradient(
+    135deg,
+    var(--soft-blue-light) 0%,
+    var(--pure-white) 50%,
+    var(--soft-blue) 100%
+  );
+  --gradient-quaternary: linear-gradient(
+    135deg,
+    var(--warm-orange-light) 0%,
+    var(--cream-white) 50%,
+    var(--soft-blue-light) 100%
+  );
+
+  /* Enhanced gradients for special effects */
+  --gradient-hero: linear-gradient(
+    135deg,
+    var(--soft-blue) 0%,
+    rgba(135, 206, 235, 0.8) 25%,
+    var(--pure-white) 50%,
+    rgba(255, 179, 71, 0.8) 75%,
+    var(--warm-orange) 100%
+  );
+  --gradient-skills: linear-gradient(
+    135deg,
+    var(--warm-orange-light) 0%,
+    var(--off-white) 30%,
+    var(--soft-blue-light) 70%,
+    var(--soft-blue) 100%
+  );
+
+  --glow-color: rgba(135, 206, 235, 0.4);
+  --glow-orange: rgba(255, 179, 71, 0.4);
+  --text-primary: #2c3e50;
+  --text-secondary: #5d6d7e;
+  --bg-glass: rgba(255, 255, 255, 0.15);
+  --bg-glass-blue: rgba(135, 206, 235, 0.1);
+  --bg-glass-orange: rgba(255, 179, 71, 0.1);
   --backdrop-blur: 20px;
   --border-radius-xl: 24px;
   --border-radius-lg: 16px;
-  --shadow-glow: 0 8px 32px rgba(102, 126, 234, 0.15);
-  --shadow-hover: 0 20px 60px rgba(102, 126, 234, 0.25);
+  --shadow-glow: 0 8px 32px rgba(135, 206, 235, 0.2);
+  --shadow-hover: 0 20px 60px rgba(255, 179, 71, 0.3);
+  --shadow-orange: 0 8px 32px rgba(255, 179, 71, 0.2);
   --animation-bounce: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --animation-fade: fadeInUp 0.6s ease-out;
   --animation-slide: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,7 +146,7 @@
 .home-hero {
   padding: 6rem 1rem 5rem;
   text-align: center;
-  background: var(--gradient-primary);
+  background: var(--gradient-hero);
   position: relative;
   overflow: hidden;
   font-family: Arial, sans-serif;
@@ -110,7 +163,7 @@
   background: linear-gradient(
     45deg,
     transparent 30%,
-    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.3) 50%,
     transparent 70%
   );
   animation: shimmer 3s infinite;
@@ -126,8 +179,22 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f8f9fa;
+    --text-secondary: #cbd5e1;
+    --bg-glass: rgba(15, 23, 42, 0.3);
+    --glow-color: rgba(135, 206, 235, 0.3);
+  }
+
   .home-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: linear-gradient(
+      135deg,
+      #1e293b 0%,
+      var(--soft-blue-dark) 25%,
+      #2c3e50 50%,
+      var(--warm-orange-dark) 75%,
+      #34495e 100%
+    );
   }
 }
 
@@ -138,7 +205,12 @@
   letter-spacing: -0.04em;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue-dark) 0%,
+    var(--pure-white) 50%,
+    var(--warm-orange-dark) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -155,10 +227,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-secondary);
   border-radius: var(--border-radius-lg);
   filter: blur(30px);
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: -1;
   animation: pulse-glow 2s infinite;
 }
@@ -166,7 +238,7 @@
 .hero-subtitle,
 .home-hero p {
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
   max-width: 800px;
   margin: 0 auto 3rem;
   line-height: 1.8;
@@ -178,7 +250,8 @@
   padding: 1rem 2rem;
   border-radius: var(--border-radius-lg);
   background: var(--bg-glass);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(135, 206, 235, 0.2);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* ========= BUTTON GROUP ========= */
@@ -201,8 +274,8 @@
   font-size: 1.1rem;
   text-decoration: none;
   background: var(--gradient-secondary);
-  color: #fff;
-  border: none;
+  color: var(--pure-white);
+  border: 2px solid var(--soft-blue-light);
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -210,6 +283,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: Arial, sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .button-group a::before,
@@ -223,7 +297,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.4),
     transparent
   );
   transition: left 0.6s;
@@ -237,14 +311,15 @@
 .button-group a:hover,
 .button-group button:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-orange);
   background: var(--gradient-tertiary);
+  border-color: var(--warm-orange);
 }
 
 /* ========= SKILLS SECTION ========= */
 .skills-section {
   padding: 4rem 1rem;
-  background: var(--gradient-quaternary);
+  background: var(--gradient-skills);
   position: relative;
   overflow: hidden;
   font-family: Arial, sans-serif;
@@ -260,7 +335,8 @@
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
     transparent 0deg 60deg,
-    rgba(255, 255, 255, 0.03) 60deg 120deg
+    rgba(135, 206, 235, 0.05) 60deg 90deg,
+    rgba(255, 179, 71, 0.05) 90deg 120deg
   );
   animation: rotate 20s linear infinite;
 }
@@ -282,7 +358,11 @@
   text-align: center;
   position: relative;
   z-index: 2;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue-dark) 0%,
+    var(--warm-orange-dark) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -312,13 +392,17 @@
 .skill-card {
   padding: 2rem 1.5rem;
   border-radius: var(--border-radius-xl);
-  background: var(--bg-glass);
+  background: linear-gradient(
+    135deg,
+    var(--pure-white) 0%,
+    var(--off-white) 100%
+  );
   backdrop-filter: blur(var(--backdrop-blur));
   color: var(--text-primary);
   font-weight: 600;
   font-size: 1.1rem;
   box-shadow: var(--shadow-glow);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(135, 206, 235, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -334,20 +418,26 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--gradient-primary);
+  background: var(--gradient-secondary);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
 }
 
 .skill-card:hover::before {
-  opacity: 0.1;
+  opacity: 0.15;
 }
 
 .skill-card:hover {
   transform: translateY(-8px) scale(1.05) rotateY(5deg);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-orange);
   animation: float 2s ease-in-out infinite;
+  border-color: var(--warm-orange);
+  background: linear-gradient(
+    135deg,
+    var(--cream-white) 0%,
+    var(--pure-white) 100%
+  );
 }
 
 .skill-card:nth-child(odd) {
@@ -431,7 +521,12 @@
 @media (prefers-color-scheme: dark) {
   .hero-title,
   .home-hero h1 {
-    background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+    background: linear-gradient(
+      135deg,
+      var(--soft-blue-light) 0%,
+      var(--pure-white) 50%,
+      var(--warm-orange-light) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -439,21 +534,49 @@
 
   .hero-subtitle,
   .home-hero p {
-    color: rgba(203, 213, 225, 0.9);
-    background: rgba(15, 23, 42, 0.3);
+    color: var(--off-white);
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(135, 206, 235, 0.3);
   }
 
   .section-title {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(
+      135deg,
+      var(--soft-blue-light) 0%,
+      var(--warm-orange-light) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .skill-card {
-    background: rgba(30, 41, 59, 0.4);
-    color: #e2e8f0;
-    border: 1px solid rgba(71, 85, 105, 0.3);
+    background: linear-gradient(
+      135deg,
+      rgba(30, 41, 59, 0.6) 0%,
+      rgba(15, 23, 42, 0.4) 100%
+    );
+    color: var(--off-white);
+    border: 2px solid rgba(135, 206, 235, 0.4);
+  }
+
+  .skill-card:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(30, 41, 59, 0.8) 0%,
+      rgba(15, 23, 42, 0.6) 100%
+    );
+    border-color: var(--warm-orange-light);
+  }
+
+  .button-group a,
+  .button-group button {
+    border-color: var(--soft-blue-light);
+  }
+
+  .button-group a:hover,
+  .button-group button:hover {
+    border-color: var(--warm-orange-light);
   }
 }
 
