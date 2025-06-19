@@ -1,7 +1,7 @@
 const skills = [
-"JavaScript— Proficient in Java with experience in object-oriented programming, data structures, and building applications.",
- "Excel (Advanced) — Data analysis, pivot tables, and visualization.",
- "SQL — Writing and optimizing queries for database management."
+"Skilled in PC assembly, hardware troubleshooting, OS installs (Windows/Linux), and setting up network devices. Familiar with Active Directory, Hyper-V, and LAN/WAN support.",
+ "Power BI & Excel skilled in data analysis using Excel and Power BI. Proficient with pivot tables, formulas, charts, and building interactive dashboards from MySQL and other sources.",
+ "MySQL & Database Management experienced in designing and managing MySQL databases, including table creation, querying with SQL (SELECT, JOIN, GROUP BY), and user access control."
 ];
 
 export default skills;
